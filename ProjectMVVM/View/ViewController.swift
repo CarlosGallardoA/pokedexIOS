@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     //creamos un array de filtro
     
     var filterData: [Result] = []
+    var urlToDetail: String? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
+        navigationItem.backButtonTitle = ""
         
     }
     func setUpData() async {
@@ -57,6 +59,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = filterData[indexPath.row].name
         cell.imageView?.image = HelperImage.setImage(id: HelperString.getIdFromUrl(url: filterData[indexPath.row].url))
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        urlToDetail = filterData[indexPath.row].url
+        performSegue(withIdentifier: "detail", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail" {
+            let pokeDetailView = segue.destination as! PokeDetailViewController
+            pokeDetailView.url = urlToDetail!
+        }
     }
 }
 extension ViewController: UISearchBarDelegate {

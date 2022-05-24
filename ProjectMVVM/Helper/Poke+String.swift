@@ -13,4 +13,8 @@ class HelperString {
         arrayString = arrayString.filter({ $0 != "" })
         return arrayString.last!
     }
+    static func getURLFromString(url: String) -> URL? {
+        guard let url = URL(string: url) else {return nil}
+        return url
+    }
 }
