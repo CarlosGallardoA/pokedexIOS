@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A72F0DA283C558C003D05EA /* Poke+image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A72F0D9283C558C003D05EA /* Poke+image.swift */; };
+		5A72F0DC283C64AB003D05EA /* Poke+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A72F0DB283C64AB003D05EA /* Poke+String.swift */; };
 		86114CD02813331400D03B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86114CCF2813331400D03B56 /* AppDelegate.swift */; };
 		86114CD22813331400D03B56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86114CD12813331400D03B56 /* SceneDelegate.swift */; };
 		86114CD42813331400D03B56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86114CD32813331400D03B56 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A72F0D9283C558C003D05EA /* Poke+image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Poke+image.swift"; sourceTree = "<group>"; };
+		5A72F0DB283C64AB003D05EA /* Poke+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Poke+String.swift"; sourceTree = "<group>"; };
 		86114CCC2813331400D03B56 /* ProjectMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86114CCF2813331400D03B56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86114CD12813331400D03B56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A72F0D8283C5522003D05EA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5A72F0D9283C558C003D05EA /* Poke+image.swift */,
+				5A72F0DB283C64AB003D05EA /* Poke+String.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		86114CC32813331300D03B56 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +73,7 @@
 		86114CCE2813331400D03B56 /* ProjectMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				5A72F0D8283C5522003D05EA /* Helper */,
 				86114CE72813334500D03B56 /* Onboarding */,
 				86114CE62813333500D03B56 /* Screens */,
 				86114CE52813332A00D03B56 /* ViewModel */,
@@ -184,8 +198,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A72F0DA283C558C003D05EA /* Poke+image.swift in Sources */,
 				86114CD42813331400D03B56 /* ViewController.swift in Sources */,
 				86114CE92813337300D03B56 /* Pokemon.swift in Sources */,
+				5A72F0DC283C64AB003D05EA /* Poke+String.swift in Sources */,
 				86114CD02813331400D03B56 /* AppDelegate.swift in Sources */,
 				86114CD22813331400D03B56 /* SceneDelegate.swift in Sources */,
 				86114CEB281333A900D03B56 /* PokeViewModel.swift in Sources */,
